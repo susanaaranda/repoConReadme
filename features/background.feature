@@ -12,4 +12,9 @@ Feature: Keycloak
     Then no se visualizan proyectos
     And se visualiza en la pantalla de Proyectos el mensaje There are no projects, please contact an administrator to create one to start
 
+  @ChangeRoleToAdmin @Automated
+  Scenario: Visualizar todos los proyectos con rol de admin
+    When le doy roll de admin al usuario desde keycloak
+    And el cliente se loguea con el usuario de keycloak
+    Then el usuario visualiza todos los proyectos en la pantalla de Dashboard
     
